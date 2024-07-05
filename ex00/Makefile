@@ -32,9 +32,9 @@ vpath %.cpp $(SRC_DIR)
 vpath %.hpp $(INC_DIR)
 vpath %.o $(OBJ_DIR)
 
-HEADERS						:= whatever.hpp
-SOURCE						:= main.cpp whatever.cpp
-OBJECTS						:= $(addprefix $(OBJ_DIR)/, $(SOURCE=.cpp=.o))
+HEADERS						:= whatever.hpp colors.hpp
+SOURCE						:= main.cpp
+OBJECTS						:= $(addprefix $(OBJ_DIR)/, $(SOURCE:.cpp=.o))
 	
 ################################################################################
 ##                                   FLAGS                                    ##
