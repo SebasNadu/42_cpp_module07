@@ -6,13 +6,13 @@
 /*   By: sebasnadu <johnavar@student.42berlin.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 11:29:53 by sebasnadu         #+#    #+#             */
-/*   Updated: 2024/07/11 21:46:55 by sebasnadu        ###   ########.fr       */
+/*   Updated: 2024/08/14 12:36:46 by johnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "colors.hpp"
 #include "whatever.hpp"
-
+#include <limits>
 #include <iostream>
 
 static void testMandatory(void) {
@@ -87,7 +87,7 @@ int main(void) {
   std::cout << '\n';
   testInt(-100, 0);
   std::cout << '\n';
-  testInt(std::numeric_limits<int>::lowest(), std::numeric_limits<int>::max());
+  testInt(std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
   std::cout << YELLOW "\n------- Test with double -------\n" RESET;
   std::cout << '\n';
   testDouble(45.5, 80.8);
@@ -96,7 +96,7 @@ int main(void) {
   std::cout << '\n';
   testDouble(-0.0001, 0.0);
   std::cout << '\n';
-  testDouble(std::numeric_limits<double>::lowest(),
+  testDouble(-std::numeric_limits<double>::max(),
              std::numeric_limits<double>::max());
   std::cout << YELLOW "\n------- Test with string -------\n" RESET;
   std::cout << '\n';

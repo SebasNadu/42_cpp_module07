@@ -32,7 +32,7 @@ vpath %.cpp $(SRC_DIR)
 vpath %.hpp $(INC_DIR)
 vpath %.o $(OBJ_DIR)
 
-HEADERS						:= array.hpp colors.hpp
+HEADERS						:= Array.hpp colors.hpp
 SOURCE						:= main.cpp
 OBJECTS						:= $(addprefix $(OBJ_DIR)/, $(SOURCE:.cpp=.o))
 	
@@ -40,7 +40,7 @@ OBJECTS						:= $(addprefix $(OBJ_DIR)/, $(SOURCE:.cpp=.o))
 ##                                   FLAGS                                    ##
 ################################################################################
 
-CXXFLAGS					:= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS					:= -Wall -Wextra -Werror -std=c++98 -g3
 INCLUDE						:= -I $(INC_DIR)
 	
 ################################################################################

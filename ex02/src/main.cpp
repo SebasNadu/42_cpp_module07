@@ -6,13 +6,13 @@
 /*   By: sebasnadu <johnavar@student.42berlin.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 16:01:40 by sebasnadu         #+#    #+#             */
-/*   Updated: 2024/08/02 10:02:24 by sebasnadu        ###   ########.fr       */
+/*   Updated: 2024/08/14 12:18:27 by johnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "colors.hpp"
-#include "array.hpp"
+#include <colors.hpp>
 #include <iostream>
+#include <Array.hpp>
 
 int main(void) {
 	try {
@@ -24,6 +24,7 @@ int main(void) {
 		std::cout << "arr2 size: " GREEN << arr2.size() << RESET << std::endl;
 		std::cout << "arr1: " GREEN << arr1 << RESET << std::endl;
 		std::cout << "arr2: " GREEN << arr2 << RESET << std::endl;
+
 		std::cout << YELLOW "\n--------Testing asign values -------\n" RESET;
 		for (size_t i = 0; i < arr1.size(); i++) {
 			try {
@@ -34,15 +35,18 @@ int main(void) {
 		}
 		std::cout << "arr1: " GREEN << arr1 << RESET << std::endl;
 		std::cout << "arr2: " GREEN << arr2 << RESET << std::endl;
+
 		std::cout << YELLOW "\n--------Testing copy constructor -------\n" RESET;
 		arr2 = arr1;
 		std::cout << "arr1: " GREEN << arr1 << RESET << std::endl;
 		std::cout << "arr2: " GREEN << arr2 << RESET << std::endl;
+
 		std::cout << YELLOW "\n--------Testing change specific index and deep copy -------\n" RESET;
 		arr1[0] = 42;
 		arr2[arr2.size() - 1] = 42;
 		std::cout << "arr1: " GREEN << arr1 << RESET << std::endl;
 		std::cout << "arr2: " GREEN << arr2 << RESET << std::endl;
+
 		std::cout << YELLOW "\n--------Testing copy to a small array -------\n" RESET;
 		Array<int> arr3(5);
 		std::cout << "arr1: " GREEN << arr1 << RESET << std::endl;
@@ -50,11 +54,13 @@ int main(void) {
 		arr3 = arr1;
 		std::cout << "arr1: " GREEN << arr1 << RESET << std::endl;
 		std::cout << "arr3: " GREEN << arr3 << RESET << std::endl;
+
 		std::cout << YELLOW "\n--------Testing default constructor -------\n" RESET;
 		arr3 = Array<int>();
 		std::cout << "arr1: " GREEN << arr1 << RESET << std::endl;
 		std::cout << "arr2: " GREEN << arr2 << RESET << std::endl;
 		std::cout << "arr3: " GREEN << arr3 << RESET << std::endl;
+
 		std::cout << YELLOW "\n--------Testing out of bounds index[0] -------\n" RESET;
 		try {
 			std::cout << "arr1: " GREEN << arr1[0] << RESET << std::endl;
